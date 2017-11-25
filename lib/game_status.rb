@@ -18,22 +18,18 @@ WIN_COMBINATIONS = [
 def won?(board)
   count = 0
   WIN_COMBINATIONS.each do |combo|
-    combo.each do |el|
-      if board[combo] == "X"
-        count += 1
-      elsif board[combo] == "O"
-        count -= 1
-      else
-        count = 0
-      end
-    end
-    if count == 3
-      return true
-    end
-    if count == -3
-      return false
-    end
-    count == 0
+    pos1 = combo[0]
+    pos2 = combo[1]
+    pos3 = combo[2]
+
+    el1 = board[pos1]
+    el2 = board[pos2]
+    el3 = board[pos3]
+
+    if (el1 == "X" && el2 == "X" && el3 == "X")
+      return combo
+    elsif (el1 == "O" && el2 == "O" && el3 == "O")
+      return combo
   end
-  return false
+  return false  
 end
