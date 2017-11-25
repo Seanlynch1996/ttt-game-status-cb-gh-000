@@ -55,11 +55,11 @@ def over?(board)
 end
 
 def winner(board)
-  if draw?(board)
-    return nil
-  else
+  if won?(board)
     arr = won?(board)
     pos = arr[0]
     return board[pos]
+  else
+    return nil
   end
 end
