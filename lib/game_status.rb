@@ -53,3 +53,17 @@ end
 def over?(board)
   return won?(board) || draw?(board)
 end
+
+def winner(board)
+  if draw?(board)
+    return nil
+  else
+    arr = won?(board)
+    if board[arr[0]] = "X"
+      return "X"
+    else
+      return "O"
+    end
+  end
+end
+  
