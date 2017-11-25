@@ -29,7 +29,8 @@ def won?(board)
       return combo
     elsif (el1 == "O" && el2 == "O" && el3 == "O")
       return combo
+    else
+      false
     end
   end
-  return false  
 end
