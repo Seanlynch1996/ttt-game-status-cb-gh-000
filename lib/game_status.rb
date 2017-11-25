@@ -61,6 +61,5 @@ def winner(board)
     arr = won?(board)
     pos = arr[0]
     return board[pos]
-    end
   end
 end
