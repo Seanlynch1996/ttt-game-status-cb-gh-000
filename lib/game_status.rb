@@ -40,7 +40,7 @@ end
 def full?(board)
   board.each do |el|
     if (el == " ")
-      false
+      return false
     end
   end
   true
