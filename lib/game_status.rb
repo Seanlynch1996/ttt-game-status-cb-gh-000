@@ -16,7 +16,6 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  count = 0
   WIN_COMBINATIONS.each do |combo|
     pos1 = combo[0]
     pos2 = combo[1]
@@ -30,6 +29,7 @@ def won?(board)
       return combo
     elsif (el1 == "O" && el2 == "O" && el3 == "O")
       return combo
+    end
   end
   return false  
 end
