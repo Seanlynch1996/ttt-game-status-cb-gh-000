@@ -35,5 +35,5 @@ def won?(board)
     end
     count == 0
   end
-  return nil
+  return false
 end
