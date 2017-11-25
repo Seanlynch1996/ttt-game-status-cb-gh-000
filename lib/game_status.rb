@@ -35,3 +35,13 @@ def won?(board)
   end
   false
 end
+
+
+def full?(board)
+  board.each do |el|
+    if (el == " ")
+      false
+    end
+  end
+  true
+end
