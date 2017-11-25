@@ -59,10 +59,8 @@ def winner(board)
     return nil
   else
     arr = won?(board)
-    if board[arr[0]] = "X"
-      return "X"
-    else
-      return "O"
+    pos = arr[0]
+    return board[pos]
     end
   end
 end
