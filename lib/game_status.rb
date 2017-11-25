@@ -14,3 +14,31 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+
+def won?(board)
+  count = 0
+  WIN_COMBINATIONS.each do |combo|
+    combo.each do |el|
+      if board[combo] == "X"
+        count += 1
+      elsif board[combo] == "O"
+        count -= 1
+      else
+        count = 0
+      end
+    end
+    if count == 3
+      return true
+    end
+    if count == -3
+      return false
+    end
+    count == 0
+  end
+  return nil
+end
+  
+
+
+
+    
